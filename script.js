@@ -43,13 +43,13 @@ async function start() {
 }
 
 function loadLabeledImages() {
-  const labels = ["anmol"];
+  const labels = ["anmol", "riddhi"];
   return Promise.all(
     labels.map(async (label) => {
       const descriptions = [];
       for (let i = 1; i <= 3; i++) {
         const img = await faceapi.fetchImage(
-          `https://raw.githubusercontent.com/parthranawat/Face-Recognition-JavaScript/master/labeled_images/${label}/${i}.jpg`
+          `https://raw.githubusercontent.com/parthranawat/-Face-Recognition-JavaScript/1954f11d6fca4af7a75c97e4749ba422a55dfce3/labeled_images/${label}/${i}.jpg`
         );
         const detections = await faceapi
           .detectSingleFace(img)
